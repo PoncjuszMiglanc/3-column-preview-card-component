@@ -1,0 +1,138 @@
+/* ********** fonts ********** */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* ********** resets ********** */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-size: 15px;
+}
+
+html, body {
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ********** custom properties ********** */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* ********** stylings ********** */
+body{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--very-light-gray);
+}
+
+.article-wrapper {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.element {
+  max-width: 19rem;
+  height: 30rem;
+  padding: 2.5rem;
+}
+
+.element h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin: 2rem 0;
+}
+
+.element p {
+  color: var(--transparent-white);
+  line-height: 1.5;
+}
+
+.first {
+  background-color: var(--bright-orange);
+}
+
+
+.second {
+  background-color: var(--dark-cyan);
+}
+
+
+.third {
+  background-color: var(--very-dark-cyan);
+}
+
+.btn-primary {
+  margin-top: 5rem;
+  border-radius: 25px;
+  padding: .7rem;
+  width: 10rem;
+  border: 2px solid var(--very-light-gray);
+}
+
+.first button {
+  color: var(--bright-orange);
+}
+
+.second button {
+  color: var(--dark-cyan);
+}
+
+.third button {
+  color: var(--very-dark-cyan);
+}
+
+.btn-primary:hover {
+  border: 2px solid var(--very-light-gray);
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--very-light-gray)
+}
+
+@media (max-width: 815px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .article-wrapper {
+    flex-direction: column;
+  }
+
+  .element {
+    max-width: 20rem;
+    height: 27rem;
+  }
+
+  .btn-primary {
+    margin-top: 2rem;
+  }
+}
